@@ -1,2 +1,2 @@
-# Yannan-Chen.local
- Local version of personal website
+# Yannan-Chen.github.io
+ Online version of personal website
