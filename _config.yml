@@ -1,0 +1,17 @@
+# Site-wide settings.
+# (When previewing locally, restart `bundle exec jekyll serve` after editing this file.)
+
+title: "Yannan Chen's Site"      # browser tab title
+header_title: "YANNAN'S SITE"    # text in the top-left of every page
+
+# How many of the most recent news items appear on the home page
+home_news_count: 4
+
+# Files that should not be published as part of the site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - assets/sass
+  - images/Thumbs.db

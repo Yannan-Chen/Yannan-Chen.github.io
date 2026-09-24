@@ -1,0 +1,17 @@
+{% comment %}
+	Publications from _data/publications.yml.
+	Include without arguments for all, or pass home_only=true for only those marked show_on_home.
+{% endcomment %}
+{% if include.home_only %}
+	{% assign pubs = site.data.publications | where: "show_on_home", true %}
+{% else %}
+	{% assign pubs = site.data.publications %}
+{% endif %}
+{% assign me = site.data.profile.name %}
+{% assign me_bold = "<b>" | append: me | append: "</b>" %}
+<ol>
+	{% for pub in pubs %}
+	<li>{{ pub.authors | replace: me, me_bold }} {{ pub.year }}. “<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>.” <i>{{ pub.journal }}</i>{% if pub.details %} {{ pub.details }}{% endif %}.</li>
+	{% endfor %}
+</ol>
+<p>* denotes co-first author</p>

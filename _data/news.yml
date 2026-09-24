@@ -1,0 +1,29 @@
+# News items, NEWEST FIRST — add new items at the top.
+# The home page shows the first few (see home_news_count in _config.yml).
+#
+#   title:   required. Markdown links allowed: [text](https://...) — they open in a new tab
+#   details: optional extra line under the title
+#   date:    required, written as YYYY-MM-DD (displayed as e.g. "Jul 24, 2025")
+
+- title: "I am nominated to be a full member at Sigma Xi, The Scientific Research Honor Society (ΣΞ)"
+  date: 2025-07-24
+
+- title: "I am married to my wife, Xinhui Li!"
+  date: 2025-01-03
+
+- title: "pLSM paper is highlighted in [Nature Reviews Bioengineering](https://www.nature.com/articles/s44222-024-00249-3)!"
+  date: 2024-09-17
+
+- title: "pLSM project is now in [Nature Biomedical Engineering](https://www.nature.com/articles/s41551-024-01249-9)!"
+  date: 2024-08-31
+
+- title: "I successfully proposed to my fiancee, Xinhui Li"
+  details: "At Yosemite National Park"
+  date: 2024-07-06
+
+- title: "I successfully defend my PhD thesis"
+  details: 'Titled "Tools for uniform labeling, high-throughput imaging, and comparative analysis of large brain samples"'
+  date: 2024-06-19
+
+- title: "I start my postdoc journey at Princeton working on connectomics"
+  date: 2024-06-03

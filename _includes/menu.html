@@ -1,0 +1,15 @@
+<!-- Menu (links come from _data/navigation.yml) -->
+	<section id="menu">
+		<section>
+			<ul class="links">
+				{% for item in site.data.navigation %}
+				<li>
+					<a href="{{ item.url }}">
+						<h3>{{ item.title }}</h3>
+						<p>{{ item.description }}</p>
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</section>

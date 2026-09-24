@@ -1,0 +1,14 @@
+{% comment %}
+	News items from _data/news.yml.
+	Include without arguments for all items, or pass limit=N to show only the N most recent.
+	Markdown links in titles are made to open in a new tab.
+{% endcomment %}
+<div class="title">
+	{% for item in site.data.news limit: include.limit %}
+	<header>
+		<h3>{{ item.title | markdownify | remove: "<p>" | remove: "</p>" | strip | replace: '<a href="http', '<a target="_blank" href="http' }}</h3>
+		{% if item.details %}<p>{{ item.details | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>{% endif %}
+		<p>{{ item.date | date: "%b %-d, %Y" }}</p>
+	</header>
+	{% endfor %}
+</div>

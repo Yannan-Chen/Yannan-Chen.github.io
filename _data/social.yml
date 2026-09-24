@@ -1,0 +1,17 @@
+# Icon links in the home page sidebar footer.
+# icon = an Ionicons name, browse them at https://ionic.io/ionicons
+
+- url: "mailto:yannanchen@princeton.edu"
+  icon: mail-outline
+
+- url: "https://twitter.com/RuoZhuyouUS"
+  icon: logo-twitter
+
+- url: "https://scholar.google.com/citations?user=50hK9aAAAAAJ&hl=en"
+  icon: school-outline
+
+- url: "https://github.com/Yannan-Chen"
+  icon: logo-github
+
+- url: "https://www.linkedin.com/in/yannan-chen/"
+  icon: logo-linkedin

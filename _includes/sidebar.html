@@ -1,0 +1,47 @@
+<!-- Sidebar (home page only) -->
+	<section id="sidebar">
+
+		<!-- Intro -->
+			<section id="intro">
+				<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+				<header>
+					<h2>{{ site.data.profile.name }}</h2>
+					<p>{{ site.data.profile.tagline }}</p>
+				</header>
+			</section>
+
+		<!-- Mini Posts (from _data/research.yml) -->
+			<section>
+				<div class="mini-posts">
+					{% for project in site.data.research %}
+					<article class="mini-post">
+						<header>
+							<h3><a href="research.html#{{ project.id }}">{{ project.sidebar_title | default: project.title }}</a></h3>
+						</header>
+						<a href="research.html#{{ project.id }}" class="image"><img src="{{ project.image }}" alt="" /></a>
+					</article>
+					{% endfor %}
+				</div>
+			</section>
+
+		<!-- About -->
+			<section class="blurb">
+				<h2>About</h2>
+				{{ site.data.profile.about | markdownify }}
+				<ul class="actions">
+					<li><a href="intro.html" class="button">Learn More</a></li>
+				</ul>
+			</section>
+
+		<!-- Footer (icons from _data/social.yml) -->
+			<section id="footer">
+				<ul class="icons">
+					<!-- Source https://ionic.io/ionicons -->
+					{% for link in site.data.social %}
+					<li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"><ion-icon name="{{ link.icon }}" size="large"></ion-icon></a></li>
+					{% endfor %}
+				</ul>
+				<p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.data.profile.name }}. </p>
+			</section>
+
+	</section>

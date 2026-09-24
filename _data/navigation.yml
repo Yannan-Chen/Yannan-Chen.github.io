@@ -1,0 +1,26 @@
+# Pages shown in the top bar and the side menu, in order.
+# description = the small line shown under the title in the side menu.
+
+- title: Intro
+  url: intro.html
+  description: Who am I
+
+- title: Research
+  url: research.html
+  description: What do I do
+
+- title: Publications
+  url: publications.html
+  description: My publications
+
+- title: News
+  url: news.html
+  description: What's new about myself
+
+- title: Interests
+  url: interests.html
+  description: What am I interested in
+
+- title: Contact
+  url: contact.html
+  description: Where to find me

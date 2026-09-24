@@ -1,0 +1,18 @@
+# Text about me that is reused across pages.
+# Text fields support Markdown, e.g. [link text](https://example.com)
+
+name: "Yannan Chen"   # also bolded automatically in publication author lists
+
+tagline: "Exploring the beauty and complexity of the brain through microscopy and brain-wide mapping"
+
+# "Who am I" — home page and Intro page
+bio: |
+  I'm currently a postdoctoral researcher at Princeton University in [Sebastian Seung's Lab](https://seunglab.org/). I completed my PhD at Columbia University in [Raju Tomer's Lab](https://tomerlab.org/). My research focuses on connectomics, where we use high-throughput electron microscopy and petabytes-scale data processing tools to map the connectivity of densely packed neurons in brain tissue. This work aims to unravel the wiring diagrams and principles underlying brain computation. During my PhD, I specialized in tissue clearing, light sheet microscopy, and brain-wide mapping. With the recent paradigm shifting advances in microscopy and computational tools, we are now able to acquire the large volumes of brain wiring diagram which was impossible a decade ago.
+
+# "What do I do" — home page
+research_summary: |
+  Mental and neurological disorders cause significant global disease burden, yet effective treatments are lacking. Whole brain mapping approaches offer a promising solution, but challenges remain in achieving uniform labeling and comparative data analysis. My work develops novel methods for uniform labeling, high-throughput imaging, and comparative analysis of large brain samples to understand the brain-wide impact of anti-depressant drug exposure.
+
+# "About" box — home page sidebar
+about: |
+  I'm currently a postdoctoral researcher at Princeton University in [Sebastian Seung's Lab](https://seunglab.org/). I completed my PhD at Columbia University in [Raju Tomer's Lab](https://tomerlab.org/). You can contact me on yannanchen[at]princeton[dot]edu. Meanwhile, my partner [Xinhui](https://xinhuili.github.io/) is developing computational methods to understand the brain. We aim to gain a deeper understanding of the principles of one of the most complex systems.

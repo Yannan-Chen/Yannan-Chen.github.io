@@ -1,359 +1,85 @@
-<!DOCTYPE HTML>
-<!--
-	Yannan Chen's website
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Yannan Chen's Site</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+---
+layout: default
+sidebar: true
+---
+<!-- Home page. Content comes from the files in _data/ -->
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">YANNAN'S SITE</a></h1>
-						<nav class="links">
-							<ul>
-								<li><a href="intro.html">Intro</a></li>
-								<li><a href="research.html">Research</a></li>
-								<li><a href="publications.html">Publications</a></li>
-								<li><a href="news.html">News</a></li>
-								<li><a href="interests.html">Interests</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav>
-						<nav class="main">
-							<ul>
-								<li class="menu">
-									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
-							</ul>
-						</nav>
+			<!-- Who am I -->
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="intro.html">Who am I</a></h2>
+						</div>
 					</header>
+					{{ site.data.profile.bio | markdownify }}
+					<footer>
+						<ul class="actions">
+							<li><a href="intro.html" class="button large">Continue Reading</a></li>
+						</ul>
+					</footer>
+				</article>
 
-				<!-- Menu -->
-					<section id="menu">
+			<!-- What do I do -->
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="research.html">What do I do</a></h2>
+						</div>
+					</header>
+					{{ site.data.profile.research_summary | markdownify }}
+					<footer>
+						<ul class="actions">
+							<li><a href="research.html" class="button large">Continue Reading</a></li>
+						</ul>
+					</footer>
+				</article>
 
-						<!-- Links -->
-							<section>
-								<ul class="links">
-									<li>
-										<a href="intro.html">
-											<h3>Intro</h3>
-											<p>Who am I</p>
-										</a>
-									</li>
-									<li>
-										<a href="research.html">
-											<h3>Research</h3>
-											<p>What do I do</p>
-										</a>
-									</li>
-									<li>
-										<a href="publications.html">
-											<h3>Publications</h3>
-											<p>My publications</p>
-										</a>
-									</li>
-									<li>
-										<a href="news.html">
-											<h3>News</h3>
-											<p>What's new about myself</p>
-										</a>
-									</li>
-									<li>
-										<a href="interests.html">
-											<h3>Interests</h3>
-											<p>What am I interested in</p>
-										</a>
-									</li>
-									<li>
-										<a href="contact.html">
-											<h3>Contact</h3>
-											<p>Where to find me</p>
-										</a>
-									</li>
-								</ul>
-							</section>
+			<!-- Publications (those with show_on_home: true) -->
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="publications.html">My publications</a></h2>
+						</div>
+					</header>
+					{% include publication-list.html home_only=true %}
+					<footer>
+						<ul class="actions">
+							<li><a href="publications.html" class="button large">See More</a></li>
+						</ul>
+					</footer>
+				</article>
 
-						<!-- Actions -->
-							<!-- <section>
-								<ul class="actions stacked">
-									<li><a href="#" class="button large fit">Log In</a></li>
-								</ul>
-							</section> -->
+			<!-- Latest news -->
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="news.html">What's new</a></h2>
+						</div>
+					</header>
+					{% include news-list.html limit=site.home_news_count %}
+					<footer>
+						<ul class="actions">
+							<li><a href="news.html" class="button large">Read more</a></li>
+						</ul>
+					</footer>
+				</article>
 
-					</section>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="intro.html">Who am I</a></h2>
-										<!-- <p></p> -->
-									</div>
-									<!-- <div class="meta">
-										<time class="published" datetime="2015-11-01">November 1, 2015</time>
-										<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-									</div> -->
-								</header>
-								<!-- <a href="single.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a> -->
-								<!-- <p><span class="image left"><img src="images/pic09.jpg" alt="" /></span> -->
-									
-									I'm currently a postdoctoral researcher at Princeton University in <a href="https://seunglab.org/">Sebastian Seung's Lab</a>. I completed my PhD at Columbia University in <a href="https://tomerlab.org/">Raju Tomer's Lab</a>. My research focuses on connectomics, where we use high-throughput electron microscopy and petabytes-scale data processing tools to map the  connectivity of densely packed neurons in brain tissue. This work aims to unravel the wiring diagrams and principles underlying brain computation. During my PhD, I specialized in tissue clearing, light sheet microscopy, and brain-wide mapping. With the recent paradigm shifting advances in microscopy and computational tools, we are now able to acquire the large volumes of brain wiring diagram which was impossible a decade ago. 
-									
-								</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="intro.html" class="button large">Continue Reading</a></li>
-									</ul>
-									<!-- <ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="#" class="icon solid fa-comment">128</a></li>
-									</ul> -->
-								</footer>
-							</article>
-
-						<!-- Post -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="research.html">What do I do</a></h2>
-										<!-- <p>Brain mapping</p> -->
-									</div>
-								</header>
-								<!-- <a class="image right"><img src="images/TH-section.png" alt="" /></a> -->
-								<p> Mental and neurological disorders cause significant global disease burden, yet effective treatments are lacking. Whole brain mapping approaches offer a promising solution, but challenges remain in achieving uniform labeling and comparative data analysis. My work develops novel methods for uniform labeling, high-throughput imaging, and comparative analysis of large brain samples to understand the brain-wide impact of anti-depressant drug exposure.</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="research.html" class="button large">Continue Reading</a></li>
-									</ul>
-
-								</footer>
-							</article>
-
-						<!-- Post -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="publications.html">My publications</a></h2>
-										<!-- <p>Publications</p> -->
-									</div>
-								</header>
-								
-								<ol>
-									
-									<p>
-										<li><b>Yannan Chen</b>, Shradha Chauhan, Cheng Gong, Hannah Dayton, et al. 2024. “<a href="https://www.nature.com/articles/s41551-024-01249-9" target="_blank">Low-cost and scalable projected light-sheet microscopy for the high-resolution imaging of cleared tissue and living samples</a>.”  <i>Nature Biomedical Engineering</i> 1-15.
-										</li>
-
-										<li>Malika S. Datta*, <b>Yannan Chen</b>*, Shradha Chauhan, Jing Zhang, et al. 2023. “<a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(23)01503-6?uuid=uuid%3Aff986e55-1ef7-47bb-acf5-0b2dd6eef479" target="_blank">Whole-brain mapping reveals the divergent impact of ketamine on the dopamine system</a>.” <i>Cell reports</i> 42 (12).
-										</li>
-										
-										<li>M. Angeles Rabadan, Estanislao Daniel De La Cruz, Sneha B. Rao, <b>Yannan Chen</b>, et al. 2022. “<a href="https://www.nature.com/articles/s41467-022-31073-1" target="_blank">An in Vitro Model of Neuronal Ensembles</a>.” <i>Nature Communications</i> 13 (1): 3340. 
-										</li>
-
-										<li>Yifan Yao, <b>Yannan Chen</b>, Raju Tomer, Rae Silver. 2024. “<a href="https://onlinelibrary.wiley.com/doi/10.1111/jne.13490" target="_blank">Capillary connections between sensory circumventricular organs and adjacent parenchyma enable local volume transmission</a>.” <i>Journal of Neuroendocrinology</i> 37 (4), e13490. 
-										</li>
-	
-										<br> 
-	
-										* denotes co-first author
-										</p>
-								</ol>
-								<footer>
-									<ul class="actions">
-										<li><a href="publications.html" class="button large">See More</a></li>
-									</ul>
-
-								</footer>
-							</article>
-
-
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="news.html">What's new</a></h2>
-									</div>
-								</header>
-								<!-- <div class="row"> -->
-								<!-- <div class="col-6 col-12-small"> -->
-									<div class="title">
-										<header>
-											<h3>I am nominated to be a full member at Sigma Xi, The Scientific Research Honor Society (ΣΞ) </h3>
-											<p>Jul 24, 2025</p>
-										</header>
-										<header>
-											<h3>I am married to my wife, Xinhui Li!</h3>
-											<p>Jan 3, 2025</p>
-										</header>
-										<header>
-											<h3>pLSM paper is highlighted in <a href="https://www.nature.com/articles/s44222-024-00249-3" target="_blank">Nature Reviews Bioengineering</a>!</h3>
-											<p>Sep 17, 2024</p>
-										</header>
-										<header>
-											<h3>pLSM project is now in <a href="https://www.nature.com/articles/s41551-024-01249-9" target="_blank">Nature Biomedical Engineering</a>!</h3>
-											<p>Aug 31, 2024</p>
-										</header>
-										
-									</div>
-								<!-- </div> -->
-							<!-- </div>							 -->
-						
-								<footer>
-									<ul class="actions">
-										<li><a href="news.html" class="button large">Read more</a></li>
-									</ul>
-
-								</footer>
-							</article>
-
-
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="interests.html">What am I interested in</a></h2>
-										<p>Research, movies, games, sports etc.</p>
-									</div>
-								</header>
-						
-								<p> 
-									<li> Watching soccer games. Team: Barcelona, Argentina, Spain. Player: Messi. </li>
-									<li> Playing tennis with my wife (amateur level, but we enjoy it a lot!)</li>
-									<li> Bakery, cooking with my wife. We are developing a tasting menu that features Chinese, Japanese, Korean, Italian, and French cuisines.</li>
-							
-								</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="interests.html" class="button large">Continue Reading</a></li>
-									</ul>
-
-								</footer>
-							</article>
-						
-
-							
-
-
-					</div>
-
-				<!-- Sidebar -->
-					<section id="sidebar">
-
-						<!-- Intro -->
-							<section id="intro">
-								<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
-								<header>
-									<h2>Yannan Chen</h2>
-									<p>Exploring the beauty and complexity of the brain through microscopy and brain-wide mapping</p>
-								</header>
-							</section>
-
-						<!-- Mini Posts -->
-							<section>
-								<div class="mini-posts">
-									<!-- Mini Post -->
-									<article class="mini-post">
-										<header>
-											<h3><a href="research.html#connectome-details">Brain connectomics </a></h3>
-											<!-- <time class="published" datetime="2015-10-20"></time> -->
-											<!-- <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a> -->
-										</header>
-										<a href="research.html#connectome-details" class="image"><img src="images/EM.png" alt="" /></a>
-									</article>
-
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="research.html#pLSM-details">Projected Light Sheet Microscopy (pLSM) 
-													for high-resolution imaging of large biological samples</a></h3>
-												<!-- <time class="published" datetime="2015-10-20"></time> -->
-												<!-- <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a> -->
-											</header>
-											<a href="research.html#pLSM-details" class="image"><img src="images/vascPLSM.png" alt="" /></a>
-										</article>
-
-									
-
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="research.html#suiteWB-details">Whole brain dopamine system mapping </a></h3>
-												<!-- <time class="published" datetime="2015-10-18">October 18, 2015</time> -->
-												<!-- <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a> -->
-											</header>
-											<a href="research.html#suiteWB-details" class="image"><img src="images/regionWiseOverlay.png" alt="" /></a>
-										</article>
-
-									<!-- Mini Post -->
-									<article class="mini-post">
-										<header>
-											<h3><a href="research.html#SOMAmer-details">Rapid, quantitative labeling protocol for large intact 
-												cleared tissue</a></h3>
-											<!-- <time class="published" datetime="2015-10-19">October 19, 2015</time> -->
-											<!-- <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a> -->
-										</header>
-										<a href="research.html#SOMAmer-details" class="image"><img src="images/GFP-aptamer.png" alt="" /></a>
-									</article>
-
-								</div>
-							</section>
-
-
-						<!-- About -->
-							<section class="blurb">
-								<h2>About</h2>
-								<p>I'm currently a postdoctoral researcher at Princeton University in <a href="https://seunglab.org/">Sebastian Seung's Lab</a>. I completed my PhD at Columbia University in <a href="https://tomerlab.org/">Raju Tomer's Lab</a>. You can contact me on yannanchen[at]princeton[dot]edu. Meanwhile, my partner <a href="https://xinhuili.github.io/">Xinhui</a> is developing computational methods to understand the brain. We aim to gain a deeper understanding of the principles of one of the most complex systems.
-								</p>
-								<ul class="actions">
-									<li><a href="intro.html" class="button">Learn More</a></li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<section id="footer">
-								<ul class="icons">
-									<!-- Source https://ionic.io/ionicons -->
-									<li><a href="mailto:yannanchen@princeton.edu" target="_blank" rel="noopener noreferrer"><ion-icon name="mail-outline" size="large"></ion-icon></a></li>
-									
-									<li><a href="https://twitter.com/RuoZhuyouUS" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-twitter" size="large"></ion-icon></a></li>
-
-									<!-- <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li> -->
-						
-									<li><a href="https://scholar.google.com/citations?user=50hK9aAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><ion-icon name="school-outline" size="large"></ion-icon></a></li>
-
-									<li><a href="https://github.com/Yannan-Chen"
-										target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github" size="large"></ion-icon></a></li>
-									<li><a href="https://www.linkedin.com/in/yannan-chen/"
-										target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin" size="large"></ion-icon></a></li>
-									<!-- <ion-icon name="heart"></ion-icon> -->
-									<!-- <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
-								</ul>
-								<p class="copyright">&copy; 2024 Yannan Chen. </p>
-							</section>
-
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-			<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	</body>
-</html>
+			<!-- Interests -->
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="interests.html">What am I interested in</a></h2>
+							<p>Research, movies, games, sports etc.</p>
+						</div>
+					</header>
+					<ul>
+						{% for interest in site.data.interests %}
+						<li>{{ interest | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+						{% endfor %}
+					</ul>
+					<footer>
+						<ul class="actions">
+							<li><a href="interests.html" class="button large">Continue Reading</a></li>
+						</ul>
+					</footer>
+				</article>

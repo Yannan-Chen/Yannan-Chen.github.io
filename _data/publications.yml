@@ -1,0 +1,57 @@
+# Publications, in the order they appear on the site.
+# Your name (from _data/profile.yml) is bolded automatically in the author list.
+# Mark co-first authors with * after their name.
+#
+#   authors:      required
+#   year:         required
+#   title:        required
+#   url:          required, link to the paper
+#   journal:      required (shown in italics)
+#   details:      optional volume/issue/pages, e.g. "42 (12)"
+#   show_on_home: true to also list it on the home page
+
+- authors: "Yannan Chen, Shradha Chauhan, Cheng Gong, Hannah Dayton, et al."
+  year: 2024
+  title: "Low-cost and scalable projected light-sheet microscopy for the high-resolution imaging of cleared tissue and living samples"
+  url: "https://www.nature.com/articles/s41551-024-01249-9"
+  journal: "Nature Biomedical Engineering"
+  details: "1-15"
+  show_on_home: true
+
+- authors: "Malika S. Datta*, Yannan Chen*, Shradha Chauhan, Jing Zhang, et al."
+  year: 2023
+  title: "Whole-brain mapping reveals the divergent impact of ketamine on the dopamine system"
+  url: "https://www.cell.com/cell-reports/fulltext/S2211-1247(23)01503-6?uuid=uuid%3Aff986e55-1ef7-47bb-acf5-0b2dd6eef479"
+  journal: "Cell reports"
+  details: "42 (12)"
+  show_on_home: true
+
+- authors: "M. Angeles Rabadan, Estanislao Daniel De La Cruz, Sneha B. Rao, Yannan Chen, et al."
+  year: 2022
+  title: "An in Vitro Model of Neuronal Ensembles"
+  url: "https://www.nature.com/articles/s41467-022-31073-1"
+  journal: "Nature Communications"
+  details: "13 (1): 3340"
+  show_on_home: true
+
+- authors: "Yifan Yao, Yannan Chen, Raju Tomer, Rae Silver."
+  year: 2024
+  title: "Capillary connections between sensory circumventricular organs and adjacent parenchyma enable local volume transmission"
+  url: "https://onlinelibrary.wiley.com/doi/10.1111/jne.13490"
+  journal: "Journal of Neuroendocrinology"
+  details: "37 (4), e13490"
+  show_on_home: true
+
+- authors: "Sneha B. Rao, Zhixiong Sun, Francesco Brundu, Yannan Chen, et al."
+  year: 2025
+  title: "Aberrant pace of cortical neuron development in brain organoids from patients with 22q11.2 deletion syndrome-associated schizophrenia"
+  url: "https://www.nature.com/articles/s41467-025-62187-x"
+  journal: "Nature Communications"
+  details: "16 (1), 6986"
+
+- authors: "Kechun Wen, Yannan Chen, Xin Meng, Samantha Botros, et al."
+  year: 2023
+  title: "A Microfluidic Dual-Aptamer Sandwich Assay for Rapid and Cost-Effective Detection of Recombinant Proteins"
+  url: "https://www.sciencedirect.com/science/article/pii/S0026265X23000723"
+  journal: "Microchemical Journal"
+  details: "188 (May): 108454"
