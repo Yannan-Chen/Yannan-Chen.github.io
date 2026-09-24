@@ -72,11 +72,7 @@ sidebar: true
 							<p>Research, movies, games, sports etc.</p>
 						</div>
 					</header>
-					<ul>
-						{% for interest in site.data.interests %}
-						<li>{{ interest | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
-						{% endfor %}
-					</ul>
+					{% include interests-list.html %}
 					<footer>
 						<ul class="actions">
 							<li><a href="interests.html" class="button large">Continue Reading</a></li>

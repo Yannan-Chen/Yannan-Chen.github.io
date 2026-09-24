@@ -11,7 +11,7 @@ The site is built by [Jekyll](https://jekyllrb.com/), which GitHub Pages runs au
 | News (News page + latest on home page)       | `_data/news.yml` — add new items at the top |
 | Publications (Publications page + home page) | `_data/publications.yml`                 |
 | Research projects (Research page + home sidebar thumbnails) | `_data/research.yml`      |
-| Interests (home page)                        | `_data/interests.yml`                    |
+| Interests (Interests page + home page)       | `_data/interests.yml`                    |
 | Bio, tagline, "About" box, research summary  | `_data/profile.yml`                      |
 | Social icons in the sidebar                  | `_data/social.yml`                       |
 | Top bar / side menu pages                    | `_data/navigation.yml`                   |
@@ -45,7 +45,7 @@ especially if it contains a colon. Use `'single quotes'` around text that itself
 
 - `_layouts/default.html` — the page skeleton (head, scripts) shared by every page
 - `_includes/` — shared pieces: `header.html`, `menu.html`, `sidebar.html` (home only),
-  `news-list.html`, `publication-list.html`
+  `news-list.html`, `publication-list.html`, `interests-list.html`
 - `index.html`, `news.html`, … — each page only contains its own content; the
   `---` block at the top picks the layout, the tab title, and whether to show the sidebar
 - `assets/`, `images/` — styles, scripts and pictures (HTML5 UP "Future Imperfect" theme)
@@ -59,5 +59,5 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Then open http://localhost:4000. After pushing, check the repository's **Actions** tab
+Then open http://localhost:4001. After pushing, check the repository's **Actions** tab
 ("pages build and deployment") — if a build fails, the previous version of the site stays online.

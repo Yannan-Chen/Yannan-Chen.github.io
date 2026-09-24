@@ -7,6 +7,9 @@ header_title: "YANNAN'S SITE"    # text in the top-left of every page
 # How many of the most recent news items appear on the home page
 home_news_count: 4
 
+# Port for local previews (`bundle exec jekyll serve`); 4000 is used by NoMachine on this PC
+port: 4001
+
 # Files that should not be published as part of the site
 exclude:
   - README.md

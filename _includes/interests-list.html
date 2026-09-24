@@ -1,0 +1,8 @@
+{% comment %}
+	Interests from _data/interests.yml, used on the home page and the Interests page.
+{% endcomment %}
+<ul>
+	{% for interest in site.data.interests %}
+	<li>{{ interest | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+	{% endfor %}
+</ul>
